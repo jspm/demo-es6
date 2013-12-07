@@ -5,7 +5,7 @@ This demo project demonstrates the standard jspm workflows:
 
 1. Write ES6 modules and load external modules from CDN
    * Clone this repo, and open `test.html`.
-   * This HTML file runs `jspm.import('./app/main')`.
+   * This HTML file runs `jspm.import('~/app/main')`.
    * We are dynamically loading jQuery from CDN and running an ES6 module load.
    * See [`app/main.js`](https://github.com/jspm/demo-es6/blob/master/app/main.js) and [`app/myclass.js`](https://github.com/jspm/demo-es6/blob/master/app/my-class.js) for the ES6 module files being loaded dynamically in the browser.
 
