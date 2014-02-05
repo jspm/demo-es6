@@ -4,11 +4,15 @@
     <meta charset='utf-8'>
     <title>test</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
-    <script src="jspm_packages/loader.js"></script>
+    <script src="jspm_packages/traceur-runtime@0.0.10.js"></script>
+    <script src="jspm_packages/system@0.4.0.js"></script>
     <script src='config.js'></script>
     <script>
-      jspm.import('~/main');
+      System.import('app/main').catch(function(e) {
+        setTimeout(function() {
+          throw e;
+        }, 1);
+      })
     </script>
   </head>
   <body>

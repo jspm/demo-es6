@@ -1,16 +1,16 @@
 {
+  "name": "app",
   "configFile": "config.js",
   "directories": {
-    "jspm_packages": "jspm_packages",
     "lib": "app",
     "dist": "app-build"
   },
-  "map": {
-    "jquery": "github:components/jquery@2.0.3"
+  "registry": "jspm",
+  "dependencies": {
+    "jquery": "^2.0.3"
   },
   "buildConfig": {
-    "uglify": true,
-    "traceur": true,
+    "minify": true,
     "transpile": true
   }
 }
