@@ -6,11 +6,12 @@
     "dist": "app-build"
   },
   "registry": "jspm",
+  "main": "app/main",
   "dependencies": {
     "jquery": "^2.0.3"
   },
   "buildConfig": {
     "minify": true,
-    "transpile": true
+    "transpileES6": true
   }
 }

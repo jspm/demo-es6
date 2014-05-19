@@ -1,11 +1,20 @@
+System.config({
+  "paths": {
+    "app/*": "app-build/*.js",
+    "npm:*": "jspm_packages/npm/*.js",
+    "github:*": "jspm_packages/github/*.js"
+  }
+});
 
-System.paths['app/*'] = 'app/*.js';
+System.config({
+  "map": {
+    "jquery": "github:components/jquery@^2.0.3"
+  }
+});
 
-System.map = {
-  'jquery': 'github:components/jquery@^2.0.3'
-};
-
-System.versions = {
-  'github:components/jquery': '2.1.0'
-};
+System.config({
+  "versions": {
+    "github:components/jquery": "2.1.0"
+  }
+});
 

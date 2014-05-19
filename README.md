@@ -1,7 +1,7 @@
 jspm ES6 demo
 ---
 
-This demo project demonstrates the standard jspm workflows:
+This demo project demonstrates an ES6 jspm workflow:
 
 1. Write ES6 modules and load external modules from CDN
    * Clone this repo, and open `test.html`.
@@ -22,10 +22,11 @@ This demo project demonstrates the standard jspm workflows:
    * Run `jspm setmode production`, then open `test.html`.
    * All module code is now loaded without browser compilation ready for production.
 
-The only thing left out here is bundling:
-* The separate AMD files can be [compiled with the r.js optimizer](https://github.com/systemjs/systemjs#building-amd-modules-into-a-single-file).
-* Hosting an app on GitHub or NPM, it can be served over SPDY with fine-grained caching, which can often be suitable for production.
-* ES6-specific bundling workflows are in development.
+4. Bundle into a single file for production
+   * Run `jspm bundle app/main`.
+   * This creats a file `build.js` containing all dependencies needed for `app/main` to run.
+   * Add `<script src="build.js"></script>` after SystemJS but before the import.
+   * All code is now loaded fully compiled from the single bundle.
 
 [https://jspm.io](https://jspm.io)
 * [jspm CLI](https://github.com/jspm/jspm-cli)
