@@ -1,8 +1,6 @@
 System.config({
   "paths": {
-    "app/*": "app-build/*.js",
-    "npm:*": "jspm_packages/npm/*.js",
-    "github:*": "jspm_packages/github/*.js"
+    "app/*": "app/*.js"
   }
 });
 
