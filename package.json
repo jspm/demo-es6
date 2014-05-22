@@ -1,17 +1,7 @@
 {
-  "name": "app",
-  "configFile": "config.js",
-  "directories": {
-    "lib": "app",
-    "dist": "app-build"
-  },
   "registry": "jspm",
   "main": "app/main",
   "dependencies": {
     "jquery": "^2.0.3"
-  },
-  "buildConfig": {
-    "minify": true,
-    "transpileES6": true
   }
 }

@@ -20,8 +20,42 @@ System.register("github:components/jquery@2.1.0", ["github:components/jquery@2.1
   return module.exports;
 });
 
-System.register("app/my-class", ["jquery"],function(e){"use strict";var t;return{exports:{get MyClass(){return t},set MyClass(e){t=e}},execute:function(){t=function(){var t=function(){e[0]["default"](document.body).css("background-color","grey"),this.writeMessage("es6 class method")};return $traceurRuntime.createClass(t,{writeMessage:function(t){e[0]["default"](document.body).html(t)}},{})}()}}});
-//# sourceMappingURL=my-class.js.map
+System.register("app/my-class", ["jquery"], function($__0) {
+  "use strict";
+  var __moduleName = "app/my-class";
+  var MyClass;
+  return {
+    exports: {
+      get MyClass() {
+        return MyClass;
+      },
+      set MyClass(value) {
+        MyClass = value;
+      }
+    },
+    execute: function() {
+      ;
+      MyClass = (function() {
+        var MyClass = function MyClass() {
+          $__0[0]["default"](document.body).css('background-color', 'grey');
+          this.writeMessage('es6 class method');
+        };
+        return ($traceurRuntime.createClass)(MyClass, {writeMessage: function(msg) {
+            $__0[0]["default"](document.body).html(msg);
+          }}, {});
+      }());
+    }
+  };
+});
 
-System.register("app/main", ["./my-class"],function(e){"use strict";return{exports:{},execute:function(){new e[0].MyClass}}});
-//# sourceMappingURL=main.js.map
+System.register("app/main", ["./my-class"], function($__0) {
+  "use strict";
+  var __moduleName = "app/main";
+  return {
+    exports: {},
+    execute: function() {
+      ;
+      new $__0[0]["MyClass"]();
+    }
+  };
+});

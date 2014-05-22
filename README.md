@@ -16,13 +16,7 @@ This demo project demonstrates an ES6 jspm workflow:
    * Run `jspm setmode local`, then open `test.html`.
    * We are now loading jQuery from the locall installed version, no other configuration or code changes being necessary for this switch.
 
-3. Build ES6 modules into ES5, transpiling into AMD with source maps
-   * Run `jspm build`.
-   * The ES6 modules in `app` are now transpiled into ES5 with AMD in the folder `app-build`.
-   * Run `jspm setmode production`, then open `test.html`.
-   * All module code is now loaded without browser compilation ready for production.
-
-4. Bundle into a single file for production
+3. Bundle into a single file for production
    * Run `jspm bundle app/main`.
    * This creats a file `build.js` containing all dependencies needed for `app/main` to run.
    * Add `<script src="build.js"></script>` after SystemJS but before the import.
