@@ -1,3 +1,4 @@
 jspm_packages/*/*
-app-build
 jspm
+build.js
+build.js.map
