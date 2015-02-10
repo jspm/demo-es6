@@ -1,6 +1,9 @@
 {
   "registry": "jspm",
   "main": "app/main",
+  "directories": {
+    "lib": "lib"
+  },
   "dependencies": {
     "jquery": "^2.0.3"
   }
