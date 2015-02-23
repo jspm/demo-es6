@@ -14,11 +14,11 @@ This demo project demonstrates an ES6 jspm workflow:
    * In the repo, run `jspm install`.
    * With no arguments, dependencies are installed from the package.json. We could also do `jspm install jquery` for example.
    * Run `jspm setmode local`, then open `test.html`.
-   * We are now loading jQuery from the locall installed version, no other configuration or code changes being necessary for this switch.
+   * We are now loading jQuery from the locally installed version, no other configuration or code changes being necessary for this switch.
 
 3. Bundle into a single file for production
    * Run `jspm bundle app/main --inject`.
-   * This creats a file `build.js` containing all dependencies needed for `app/main` to run.
+   * This creates a file `build.js` containing all dependencies needed for `app/main` to run.
    * `--inject` sets the bundle to load automatically when a module is requested from it.
    * We could alternatively use `<script src="build.js"></script>` after SystemJS but before the import.
    * All code is now loaded fully compiled from the single bundle.
